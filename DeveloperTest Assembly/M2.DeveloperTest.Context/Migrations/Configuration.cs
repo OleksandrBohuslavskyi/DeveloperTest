@@ -29,7 +29,8 @@ namespace M2.DeveloperTest.Context.Migrations
                     City = "Bensalem",
                     State = "PA",
                     Zip = "19020",
-                    Active = true
+                    Active = true,
+                    Email = "john.doe@gmail.com"
                 },
                 new Entities.Participant()
                 {
@@ -41,7 +42,8 @@ namespace M2.DeveloperTest.Context.Migrations
                     City = "Stamford",
                     State = "CT",
                     Zip = "06905",
-                    Active = true
+                    Active = true,
+                    Email = "jane.doe@gmail.com"
                 }
             };
 

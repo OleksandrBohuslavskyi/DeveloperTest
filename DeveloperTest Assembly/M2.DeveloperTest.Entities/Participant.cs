@@ -17,5 +17,6 @@ namespace M2.DeveloperTest.Entities
         public virtual string City { get; set; }
         public virtual string State { get; set; }
         public virtual string Zip { get; set; }
+        public virtual string Email { get; set; }
     }
 }

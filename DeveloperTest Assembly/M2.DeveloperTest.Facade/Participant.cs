@@ -43,7 +43,12 @@ namespace M2.DeveloperTest.Facade
                     where participant.Active
                     select participant).ToList();
         }
-        
+
+        public M2.DeveloperTest.Entities.Participant GetById(int id)
+        {
+            return this._context.Participants.FirstOrDefault(p => p.ParticipantId == id);
+        }
+
         #endregion
 
         #region Helper Methods

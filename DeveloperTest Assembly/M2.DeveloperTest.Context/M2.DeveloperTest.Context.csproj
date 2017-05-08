@@ -57,6 +57,10 @@
     <Compile Include="Migrations\201703251801055_InitialDatabase.Designer.cs">
       <DependentUpon>201703251801055_InitialDatabase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705080842347_EmailFieldAdded.cs" />
+    <Compile Include="Migrations\201705080842347_EmailFieldAdded.Designer.cs">
+      <DependentUpon>201705080842347_EmailFieldAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ParticipantConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,6 +90,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201703251801055_InitialDatabase.resx">
       <DependentUpon>201703251801055_InitialDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705080842347_EmailFieldAdded.resx">
+      <DependentUpon>201705080842347_EmailFieldAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

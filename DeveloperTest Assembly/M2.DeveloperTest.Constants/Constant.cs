@@ -27,6 +27,7 @@ namespace M2.DeveloperTest.Constants
 
         // Public regular expression constants.
         public const string ZipRegularExpression = @"^(\d{5}-\d{4}|\d{5}|\d{9})$";
+        public const string EmailRegularExpression = @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$";
 
         #endregion
 

@@ -24,6 +24,13 @@ namespace DeveloperTest.Controllers
                 return View("Unknown");
         }
 
+        //
+        // GET: /Error/UnknownParticipant/
+        public ActionResult UnknownParticipant()
+        {
+            return View("UnknownParticipant");
+        }
+
         #endregion
     }
 }

@@ -7,6 +7,8 @@ namespace DeveloperTest.Models.Participant
 {
     public class Index
     {
+        public int ParticipantId { get; set; }
+
         public string FirstName { get; set; }
         
         public string LastName { get; set; }
@@ -16,5 +18,7 @@ namespace DeveloperTest.Models.Participant
         public string State { get; set; }
         
         public string Zip { get; set; }
+
+        public string Email { get; set; }
     }
 }

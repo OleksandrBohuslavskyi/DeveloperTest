@@ -40,6 +40,11 @@ namespace DeveloperTest.Models.Participant
         [Display(Name = "Zip")]
         public string Zip { get; set; }
 
+        [Required(ErrorMessage = M2.DeveloperTest.Constants.Constant.RequiredErrorMessage)]
+        [RegularExpression(M2.DeveloperTest.Constants.Constant.EmailRegularExpression, ErrorMessage = M2.DeveloperTest.Constants.Constant.InvalidFormatErrorMessage)]
+        [Display(Name = "Email")]
+        public string Email { get; set; }
+
         public SelectList StateList { get; set; }
     }
 }

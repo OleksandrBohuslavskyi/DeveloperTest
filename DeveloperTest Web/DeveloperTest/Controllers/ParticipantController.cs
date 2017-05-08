@@ -45,6 +45,7 @@ namespace DeveloperTest.Controllers
                 participant.City = add.City;
                 participant.State = add.State;
                 participant.Zip = add.Zip;
+                participant.Email = add.Email;
 
                 ParticipantFacade.Add(participant);
 
@@ -66,15 +67,43 @@ namespace DeveloperTest.Controllers
             List<Models.Participant.Index> indexes = ParticipantFacade.GetAll()
                                                         .Select(p => new Models.Participant.Index
                                                         {
+                                                            ParticipantId = p.ParticipantId,
                                                             FirstName = p.FirstName,
                                                             LastName = p.LastName,
                                                             City = p.City,
                                                             State = p.State,
-                                                            Zip = p.Zip
+                                                            Zip = p.Zip,
+                                                            Email = p.Email
                                                         })
                                                         .ToList();
-            
+
             return View(indexes);
+        }
+
+        public ActionResult Details(int? Id)
+        {
+            if (Id.HasValue)
+            {
+                var participant = ParticipantFacade.GetById(Id.Value);
+
+                if (participant != null)
+                {
+                    Models.Participant.Details detailsModel = new Models.Participant.Details()
+                    {
+                        AddressLine1 = participant.AddressLine1,
+                        AddressLine2 = participant.AddressLine2,
+                        City = participant.City,
+                        Email = participant.Email,
+                        FirstName = participant.FirstName,
+                        Gender = participant.Gender,
+                        LastName = participant.LastName,
+                        State = participant.State,
+                        Zip = participant.Zip
+                    };
+                    return View(detailsModel);
+                }
+            }
+            return RedirectToAction("UnknownParticipant", "Error");
         }
     }
 }
