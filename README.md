@@ -12,6 +12,8 @@ Test task ASP.NET MVC
 # Objectives: 
     Add e-mail address to the participant entity and produce an EF Code-First migration. 
     Add e-mail address to all participant views.
-    Add a “view" button for each participant displayed on the Participant/Index list view. This button will link to a new view that displays all data (i.e full name, gender, full mailing address, and e-mail address) for the participant.
+    Add a â€œview" button for each participant displayed on the Participant/Index list view. This button 
+    will link to a new view that displays all data (i.e full name, gender, full mailing address, and 
+    e-mail address) for the participant.
 
 # Please, returns the completed solution at his earliest convenience.
